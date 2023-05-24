@@ -8,6 +8,13 @@ A simple Linux program to record one's typing speed, meant to be run from the te
 $ pip3 install pynput pyspellchecker statistic matplotlib scipy
 ```
 &nbsp;
+* **Set File Path** 
+```
+$ sudo nano wpm.sh
+```
+Replace ```main_path=.../Typing-Speed-Monitor/src``` with correct path.
+
+&nbsp;
 * **Add Alias**
 ```
 $ sudo nano ~/.bashrc
