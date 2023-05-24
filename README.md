@@ -7,12 +7,12 @@ A simple Linux program to record one's typing speed, meant to be run from the te
 ```
 $ pip3 install pynput spellchecker statistic matplotlib scipy
 ```
-***
+
 **Add Alias**
 ```
 $ alias wpm='location_of_file/wpm.sh start'
 ```
-***
+
 **Configure to Run on Startup**
 
 Follow steps listed [here](https://www.baeldung.com/linux/run-script-on-startup#3-using-initd):
@@ -40,19 +40,24 @@ $ update-rc.d wpm_wrapper.sh defaults
 Once Set-Up steps are completed, the following commands are available in the terminal.
 ```
 $ wpm start
+
 # starts new recording. 
 # Does not check if a recording is already in progress
 # It is not nessessary to run this manualy if it has been configured to run at startup
-
+```
+```
 $ wpm lst
-# lists all recordings in a verticle numbered list
 
+# lists all recordings in a verticle numbered list
+```
+```
 $ wpm dp {int, filename, or empty}
 # displays a graph of the recording given my the first parameter.
 # The parameter may be the integer index of the file as given by $ wpm lst
 # or the name of the file,
 # Leaving the parameter blank displays the most recent recording.
-
+```
+```
 $ wpm del {filename}
 # deletes the given recording
 ```
