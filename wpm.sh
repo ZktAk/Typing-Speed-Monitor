@@ -1,12 +1,11 @@
 #!/bin/sh
 
+cd path_to_file
 sessions_path=./sessions
-cd ~/Scripts/WPM-Monitor
 
 start(){
   python main.py &
 }
-
 
 lst() {
   n=0
@@ -20,7 +19,7 @@ lst() {
 dp() {
 
   if [ "x$1" = "x" ]; then
-    filename=$(ls sessions | tail -n 1)
+    filename=$(ls $sessions_path | tail -n 1)
     export filename
   elif [ -n "$1" ] && [ $1 -eq $1 ] 2>/dev/null; then
     filename=$(ls $sessions_path | sed -n $1p)

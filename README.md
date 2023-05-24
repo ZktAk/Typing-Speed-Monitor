@@ -5,7 +5,7 @@ A simple Linux program to record one's typing speed, meant to be run from the te
 ***
 * **Install Dependancies** 
 ```
-$ pip3 install pynput spellchecker statistic matplotlib scipy
+$ pip3 install pynput pyspellchecker statistic matplotlib scipy
 ```
 &nbsp;
 * **Add Alias**
