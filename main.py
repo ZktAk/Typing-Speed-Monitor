@@ -11,7 +11,7 @@ class Seasion:
         self.wpm_history = []
         self.time = tm()
         self.last_save = self.time
-        self.id = "seasions/" + str(time.strftime('%Y-%m-%d_%H:%M:%S', time.localtime()))
+        self.id = "sessions/" + str(time.strftime('%Y-%m-%d_%H:%M:%S', time.localtime()))
 
     def add(self):
         elapsed_seconds = tm() - self.time

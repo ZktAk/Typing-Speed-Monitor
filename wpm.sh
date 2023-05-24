@@ -1,6 +1,6 @@
 #!/bin/sh
 
-seasions_path=./seasions
+sessions_path=./sessions
 cd ~/Scripts/WPM-Monitor
 
 start(){
@@ -10,7 +10,7 @@ start(){
 
 lst() {
   n=0
-  cd $seasions_path || exit
+  cd $sessions_path || exit
   for i in *; do
     n=$(($n + 1))
 	  echo "$n. $i"
@@ -20,10 +20,10 @@ lst() {
 dp() {
 
   if [ "x$1" = "x" ]; then
-    filename=$(ls seasions | tail -n 1)
+    filename=$(ls sessions | tail -n 1)
     export filename
   elif [ -n "$1" ] && [ $1 -eq $1 ] 2>/dev/null; then
-    filename=$(ls $seasions_path | sed -n $1p)
+    filename=$(ls $sessions_path | sed -n $1p)
     export filename
   else
     export export filename=$1
@@ -34,7 +34,7 @@ dp() {
 
 del() {
   filename=$1
-  rm -r "$seasions_path/$filename"
+  rm -r "$sessions_path/$filename"
   echo "removed $filename"
 }
 

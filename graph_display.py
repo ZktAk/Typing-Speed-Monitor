@@ -5,7 +5,7 @@ import numpy as np
 from scipy.interpolate import make_interp_spline, BSpline
 import os
 
-wpm_file = open("seasions/" + os.environ['filename'], "rb")
+wpm_file = open("sessions/" + os.environ['filename'], "rb")
 wpm = pickle.load(wpm_file)
 wpm_file.close()
 
