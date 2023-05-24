@@ -52,6 +52,7 @@ $ wpm lst
 ```
 ```
 $ wpm dp {int, filename, or empty}
+
 # displays a graph of the recording given my the first parameter.
 # The parameter may be the integer index of the file as given by $ wpm lst
 # or the name of the file,
@@ -59,5 +60,6 @@ $ wpm dp {int, filename, or empty}
 ```
 ```
 $ wpm del {filename}
+
 # deletes the given recording
 ```
