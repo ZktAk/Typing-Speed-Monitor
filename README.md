@@ -7,13 +7,14 @@ A simple Linux program to record one's typing speed, meant to be run from the te
 ```
 $ pip3 install pynput spellchecker statistic matplotlib scipy
 ```
-
+&nbsp;
 * **Add Alias**
 ```
 $ sudo nano ~/.bashrc
 ```
 Add ```alias wpm='location_of_file/wpm.sh start'``` to last line
 
+&nbsp;
 * **Configure to Run on Startup**
 
 Follow steps listed [here](https://www.baeldung.com/linux/run-script-on-startup#3-using-initd):
