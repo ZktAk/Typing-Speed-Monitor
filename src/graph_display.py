@@ -1,11 +1,10 @@
-
 import pickle
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.interpolate import make_interp_spline, BSpline
 import os
 
-wpm_file = open("sessions/" + os.environ['filename'], "rb")
+wpm_file = open(os.environ['sessions_path'] + "/" + os.environ['filename'], "rb")
 wpm = pickle.load(wpm_file)
 wpm_file.close()
 

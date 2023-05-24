@@ -4,14 +4,15 @@ from time import time as tm
 import time
 import statistics
 import pickle
+import os
 
 class Seasion:
-    def __init__(self):
+    def __init__(self, path):
         self.raw = []
         self.wpm_history = []
         self.time = tm()
         self.last_save = self.time
-        self.id = "sessions/" + str(time.strftime('%Y-%m-%d_%H:%M:%S', time.localtime()))
+        self.id = str(path) + "/" + str(time.strftime('%Y-%m-%d_%H:%M:%S', time.localtime()))
 
     def add(self):
         elapsed_seconds = tm() - self.time
@@ -31,17 +32,19 @@ class Seasion:
         self.time = tm()
 
     def save(self):
+        os.makedirs(os.path.dirname(self.id), exist_ok=True)
         my_history_file = open(self.id, "wb")
         pickle.dump(self.wpm_history, my_history_file)
+        my_history_file.close()
 
 
 
 class Collector:
-    def __init__(self):
+    def __init__(self, path):
         self.current_word = ""
         self.spell = SpellChecker()  # loads default word frequency list
         self.puctuation = [',', '.', '?', '!', ';', ':', '-', '_', '\'', '\"', '/', '\\', '|', '(', ')', '{', '}', '[', ']', '%',]
-        self.seasion = Seasion()
+        self.seasion = Seasion(path)
 
     def start(self):
         with keyboard.Listener(on_press=self.on_press, on_release=self.on_release) as listener:
@@ -87,5 +90,5 @@ class Collector:
 
 if __name__ == '__main__':
 
-    tool = Collector()
+    tool = Collector(os.environ['sessions_path'])
     tool.start()

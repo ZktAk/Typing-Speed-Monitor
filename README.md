@@ -27,7 +27,7 @@ $ sudo nano /etc/init.d/wpm_wrapper.sh
 case "$1" in
   start)
     # Executes our script
-    sudo sh location_of_file/wpm.sh
+    sudo sh location_of_file/wpm.sh start
     ;;
   *)
     ;;

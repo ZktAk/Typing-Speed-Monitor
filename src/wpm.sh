@@ -1,10 +1,12 @@
 #!/bin/sh
 
-cd path_to_file
-sessions_path=./sessions
+main_path=.../Typing-Speed-Monitor/src
+sessions_path=$main_path/sessions
+
+export sessions_path
 
 start(){
-  python main.py &
+  python $main_path/main.py &
 }
 
 lst() {
@@ -28,7 +30,7 @@ dp() {
     export export filename=$1
   fi
   echo "loading wpm graph"
-  python graph_display.py 2> /dev/null &
+  python $main_path/graph_display.py 2> /dev/null &
 }
 
 del() {
