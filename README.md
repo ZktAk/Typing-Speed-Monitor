@@ -19,7 +19,7 @@ Replace ```main_path=.../Typing-Speed-Monitor/src``` with correct path.
 ```
 $ sudo nano ~/.bashrc
 ```
-Add ```alias wpm='location_of_file/wpm.sh start'``` to last line
+Add ```alias wpm='location_of_file/wpm.sh'``` to last line
 
 &nbsp;
 * **Configure to Run on Startup**
