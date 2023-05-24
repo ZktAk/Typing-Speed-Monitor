@@ -1,6 +1,6 @@
 #!/bin/sh
 
-main_path=.../Typing-Speed-Monitor/src
+main_path=~/Scripts/WPM-Monitor/Typing-Speed-Monitor/src
 sessions_path=$main_path/sessions
 
 export sessions_path
