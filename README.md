@@ -26,7 +26,8 @@ Add ```alias wpm='location_of_file/wpm.sh'``` to last line.
 
 Follow steps listed [here](https://www.baeldung.com/linux/run-script-on-startup#3-using-initd):
 ```
-$ sudo nano /etc/init.d/wpm_wrapper.sh
+$ cd /etc/init.d
+$ sudo nano wpm_wrapper.sh
 ```
 ```
 ! /bin/sh
